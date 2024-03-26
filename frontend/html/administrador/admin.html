@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Palabras del Ahorcado</title>
+    <link rel="stylesheet" href="../../css/admin.css"> 
+
+    <style>
+        body {
+            background-color: #a6e284; 
+            margin: 0;
+            padding: 0;
+        } 
+
+        .admin-container {
+            /* Agrega estilos para el contenedor principal si es necesario */
+        }
+
+        img {
+            margin-top: 20px; /* Ajusta el espacio superior si es necesario */
+            max-width: 200%; /* Ajusta el ancho máximo de la imagen */
+            height: auto; /* Permite que la imagen conserve su relación de aspecto */
+            display: block; /* Permite aplicar márgenes automáticos horizontalmente */
+            margin-left: auto; /* Centra horizontalmente */
+            margin-right: auto; /* Centra horizontalmente */
+        } 
+
+        #crearPalabraForm {
+    text-align: center; /* Centra el contenido del formulario */
+    margin-top: 20px; /* Espacio superior */
+} 
+
+#crearPalabraForm {
+    background-color: gray; /* Color de fondo gris claro */
+    padding: 20px; /* Espacio interno */
+    border-radius: 20px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio superior */ 
+    max-width: 800px; /* Ancho máximo del contenedor */  
+} 
+
+#eliminarUsuarioForm {
+    max-width: 400px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: gray; /* Color de fondo gris claro */
+    padding: 15px; /* Espacio interno reducido */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio superior */
+} 
+
+#crearPalabraForm {
+    max-width: 400px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: gray; /* Color de fondo gris claro */
+    padding: 15px; /* Espacio interno reducido */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio superior */
+} 
+
+#crearPalabraLink {
+    text-decoration: none; /* Quitar subrayado */
+    color: #fff; /* Color del texto */
+    background-color: #007bff; /* Color de fondo azul */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+} 
+
+#eliminarUsuarioLink {
+    text-decoration: none; /* Quitar subrayado */
+    color: #fff; /* Color del texto */
+    background-color: #007bff; /* Color de fondo azul */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+} 
+
+#crearPalabraLink {
+    text-decoration: none; /* Quitar subrayado */
+    color: #fff; /* Color del texto */
+    background-color: #007bff; /* Color de fondo azul */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-right: 50px; /* Margen entre los botones */
+    display: inline-block; /* Mostrar en línea */
+} 
+
+#eliminarUsuarioLink {
+    text-decoration: none; /* Quitar subrayado */
+    color: black;/* Color del texto */
+    background-color: #007bff; /* Color de fondo azul */
+    padding: 10px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-right: 5px; /* Margen entre los botones */
+    display: inline-block; /* Mostrar en línea */ 
+    
+} 
+
+#crearPalabraLink:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+} 
+
+#eliminarUsuarioLink:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+} 
+
+nav {
+    background-color: #333; /* Color de fondo de la barra de navegación */
+    padding: 10px 0; /* Espaciado interno en la parte superior e inferior */
+    border-radius: 20px;
+} 
+
+nav li {
+    display: inline; /* Mostrar en línea */
+    margin-right: 20px; /* Margen derecho entre los elementos de la lista */
+} 
+
+nav {
+    background-color: #333; /* Color de fondo de la barra de navegación */
+    padding: 10px 0; /* Espaciado interno en la parte superior e inferior */
+    text-align: center; /* Centrar los elementos de la barra de navegación */
+} 
+
+nav a {
+    border-radius: 6px;
+} 
+
+/* Estilos para el formulario "Eliminar Usuario" */
+#eliminarUsuarioForm {
+    display: none; /* Ocultar el formulario por defecto */
+}
+
+/* Estilos para el formulario "Crear Palabra" */
+#crearPalabraForm {
+    display: none; /* Ocultar el formulario por defecto */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333; /* Color de fondo de la barra de navegación */
+    padding: 10px 10px; /* Espaciado interno en la parte superior e inferior */
+    text-align: center; /* Centrar los elementos de la barra de navegación */
+    display: flex; /* Mostrar los elementos en línea */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+}
+
+nav ul {
+    list-style-type: none; /* Quitar los puntos de lista */
+    margin: 0; /* Eliminar el margen exterior */
+    padding: 0; /* Eliminar el relleno */
+    display: flex; /* Mostrar los elementos en línea */
+}
+
+nav li {
+    margin-right: 20px; /* Margen derecho entre los elementos de la lista */
+}
+
+nav a {
+    text-decoration: none; /* Quitar subrayado */
+    color: #fff; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+nav a:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el cursor */
+} 
+
+#crearPalabraForm {
+    display: none; /* Ocultar el formulario por defecto */
+    width: 70%; /* Ancho del formulario */
+    height: 200px; /* Altura del formulario */
+    margin: 20px auto; /* Margen superior e inferior automático para centrar horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: black; /* Color de fondo */
+} 
+
+#eliminarUsuarioForm {
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: black; /* Color de fondo */ 
+    color: blue;
+}
+
+header h1 {
+    text-align: center; /* Alinear el texto al centro */
+} 
+    </style>
+</head>
+<body> 
+
+    <div class="admin-container"></div> 
+
+    <header>
+        <h1>¡Bienvenido!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" id="eliminarUsuarioLink">Eliminar Usuario</a>
+                <div id="eliminarUsuarioForm">
+                    <h2>Eliminar Usuario</h2>
+                    <form action="../../../backend/user/eliminar-usuario.php" method="post">
+                        <label for="nombreUsuarioEliminar">Nombre del Usuario a Eliminar:</label>
+                        <input type="text" id="nombreUsuarioEliminar" name="name"><br><br>
+                        <input type="submit" value="Eliminar Usuario">
+                    </form>
+                </div>
+            </li>
+            <li>
+                <a href="#" id="crearPalabraLink" style="text-decoration: none; color: #3d3d3d; font-weight: bold;">Crear Palabra</a>
+                <div id="crearPalabraForm" style="display:none; margin-top: 20px;">
+                    <h2 style="color: #007bff; margin-bottom: 15px;">Crear una Palabra</h2>
+                    <form action="../../../backend/pregunta/crear-pregunta.php" method="post">
+                        <div style="margin-bottom: 10px;">
+                            <label for="palabra" style="font-weight: bold; color: #555;">Palabra:</label><br>
+                            <input type="text" id="palabra" name="palabra" style="width: 50%; padding: 5px; border-radius: 5px; border: 1px solid #272525;">
+                        </div>
+                        <input type="submit" value="Crear" style="background-color: #4c545e; color: #b8abab; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer;">
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav> 
+    <img src="https://fotocov.com/wp-content/uploads/2021/10/Arbol-Ahorcado-Animados-Gif-Imagenes.gif" alt="Comienza">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#eliminarUsuarioForm').hide();
+            $('#crearPalabraForm').hide();
+
+            $('#eliminarUsuarioLink').click(function(){
+                $('#eliminarUsuarioForm').slideToggle();
+                $('#crearPalabraForm').hide(); // Oculta el formulario de crear palabra si se muestra
+            });
+
+            $('#crearPalabraLink').click(function(){
+                $('#crearPalabraForm').slideToggle();
+                $('#eliminarUsuarioForm').hide(); // Oculta el formulario de eliminar usuario si se muestra
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+#crearUsuarioForm, #jugarForm, #adminLoginForm {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+#crearUsuarioForm h2, #jugarForm h2, #adminLoginForm h2 {
+    margin-top: 0;
+}
+
+/* Estilos específicos para la imagen principal */
+.imgPrincipal {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.imgPrincipal img {
+    width: 200px;
+    height: auto;
+} 
+
+.imgPrincipal {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333; /* Color de fondo */
+    padding: 5px 0; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+}
+
+nav ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno de los enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+nav ul li a:hover {
+    background-color: #2d2d2d; /* Cambia el color de fondo al pasar el ratón */
+} 
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333; /* Color de fondo */
+    padding: 10px 0; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+}
+
+nav ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno de los enlaces */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+nav ul li a:hover {
+    background-color: #fff; /* Cambia el color de fondo al pasar el ratón */
+    color: #333; /* Cambia el color del texto */
+} 
+
+/* Estilos para los formularios */
+form {
+    margin: 20px auto; /* Margen externo para centrar el formulario */
+    padding: 20px; /* Espaciado interno */
+    width: 300px; /* Ancho del formulario */
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+form h2 {
+    margin-top: 0; /* Elimina el margen superior del título del formulario */
+}
+
+form label {
+    display: block; /* Muestra las etiquetas en una línea separada */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: calc(100% - 20px); /* Ancho del 100% menos el espacio del borde */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 3px; /* Bordes redondeados */
+}
+
+form input[type="submit"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+form input[type="submit"]:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el ratón */
+}

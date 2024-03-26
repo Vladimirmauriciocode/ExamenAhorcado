@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="./frontend/css/style.css"> 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Incluye jQuery -->
+    <script>
+        $(document).ready(function(){
+            $('#crearUsuarioForm').hide();
+            $('#eliminarUsuarioForm').hide(); // Oculta el formulario de eliminar al cargar la página
+            $('#jugarForm').hide(); // Oculta el formulario de jugar al cargar la página
+
+            $('#crearUsuarioLink').click(function(){
+                $('#crearUsuarioForm').slideToggle();
+                $('#eliminarUsuarioForm').hide(); // Oculta el formulario de eliminar si se muestra
+                $('#jugarForm').hide(); // Oculta el formulario de jugar si se muestra
+            });
+
+
+            $('#jugarLink').click(function(){
+                $('#jugarForm').slideToggle();
+                $('#crearUsuarioForm').hide(); // Oculta el formulario de crear si se muestra
+                $('#eliminarUsuarioForm').hide(); // Oculta el formulario de eliminar si se muestra
+
+            });
+
+            $('#adminLink').click(function(){
+                $('#adminLoginForm').slideToggle();
+                $('#crearUsuarioForm').hide(); // Oculta el formulario de crear si se muestra
+                $('#eliminarUsuarioForm').hide(); // Oculta el formulario de eliminar si se muestra
+                $('#jugarForm').hide(); // Oculta el formulario de jugar si se muestra
+            });
+        });
+    </script>
+</head>
+<body>   
+
+    <header>
+        <h1> Hanged</h1>
+    </header>
+
+        
+    <main class="imgPrincipal"> 
+        <img src="https://gifslocosanimados.files.wordpress.com/2012/07/tumblr_m2lom8oeac1qe31nvo1_400.gif" alt="">
+    </main>
+    
+    <nav>
+        <ul>
+            <li><a href="#" id="crearUsuarioLink">Crear Usuario</a></li>
+            <li><a href="#" id="jugarLink">Juguemos</a></li> <!-- Cambia el href a # -->
+            <li><a href="#" id="adminLink">Administrador</a></li> <!-- Nuevo enlace para el administrador -->
+        </ul>
+    </nav>
+      
+    </div>
+    <div id="crearUsuarioForm">
+        <h2>Crear Nuevo Usuario</h2>
+        <form action="./backend/user/crear-usuario.php" method="post">
+            <label for="name">Apodo:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="password">Contraseña:</label><br><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="crear">
+        </form> 
+    </div>
+   
+    <div id="jugarForm">
+        <h2>Juguemos</h2>
+        <form action="./backend/user/login-usuario.php" method="post">
+            <label for="loginName">Nombre:</label>
+            <input type="text" id="loginName" name="name"><br><br>
+            <label for="loginPassword">Contraseña:</label><br><br>
+            <input type="password" id="loginPassword" name="password"><br><br>
+            <input type="submit" value="Jugar">
+
+    </form>
+    </div>
+
+    <div id="adminLoginForm">
+        <h2>Inicio de Sesión de Administrador</h2>
+        <form action="./backend/user/admin-usuario.php" method="post">
+            <label for="adminName">Nombre de Usuario:</label>
+            <input type="text" id="adminName" name="adminName"><br><br>
+            <label for="adminPassword">Contraseña:</label><br><br>
+            <input type="password" id="adminPassword" name="adminPassword"><br><br>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </div>
+
+
+</body>
+</html>

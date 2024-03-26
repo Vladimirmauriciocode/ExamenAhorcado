@@ -1,0 +1,45 @@
+#crearPalabraForm input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Agregar sombra */
+    transition: box-shadow 0.3s ease; /* Agregar transición para la sombra */
+}
+
+#crearPalabraForm input[type="submit"]:hover {
+    background-color: #66717c;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); /* Aumentar la sombra al pasar el cursor */
+} 
+
+.admin-container {
+    background-color: #b3a8a8; /* Color de fondo para la página de administrador */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    text-align: right; /* Centra horizontalmente el contenido */
+}
+
+.admin-container img { 
+    text-align: center; 
+    max-width: 50px;
+    display: block; /* Para asegurarse de que la imagen ocupe todo el ancho del contenedor */
+    margin: 0 auto; /* Para centrar horizontalmente */
+}  
+
+.boton {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Estilos adicionales para cuando el cursor esté sobre el botón */
+.boton:hover {
+    background-color: #0056b3;
+}

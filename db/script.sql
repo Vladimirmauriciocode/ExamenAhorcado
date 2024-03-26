@@ -1,0 +1,12 @@
+
+CREATE TABLE Usuario (
+    idUser INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    password VARCHAR(512) NOT NULL
+);
+
+CREATE TABLE PalabrasAhorcado (
+    idPalabra INT PRIMARY KEY AUTO_INCREMENT,
+    palabra VARCHAR(50) NOT NULL
+);
+
